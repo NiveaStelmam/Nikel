@@ -12,7 +12,19 @@
 .coins{
     position: absolute;
     bottom: 100px;
-
-
 }
 
+.button-login{
+    border-radius: 10px;
+    background-color: #4c0070;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 25%;    
+}
+
+/* hover - applies styles to an element when the cursor hovers over it */
+
+.button-login:hover{
+    background: #4c79d3;
+    color: #ffffff;
+}
