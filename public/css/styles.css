@@ -47,9 +47,15 @@ header{
     margin: 0 25%;    
 }
 
+.button-default{
+    border-radius: 10px;
+    background-color: #4c0070;
+    color: #ffffff;
+}
+
 /* hover - applies styles to an element when the cursor hovers over it */
 
-.button-login:hover{
+.button-login:hover, .button-default:hover{
     background: #4c79d3;
     color: #ffffff;
 }
@@ -66,4 +72,10 @@ header{
 .my-form-text{
     font-size: 14px;
     color: #808080;
+}
+
+.info{
+    background-color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px 0px 0px 0px;
 }
