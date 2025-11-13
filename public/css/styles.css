@@ -18,6 +18,12 @@ header{
     color: #4c0070;
 }
 
+.icon-detail{
+    font-size: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .color-secondary{
     color: #4c79d3;
 }
