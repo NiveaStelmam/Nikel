@@ -53,8 +53,31 @@ header{
     color: #ffffff;
 }
 
-/* hover - applies styles to an element when the cursor hovers over it */
+.button-cancel{
+    border-radius: 10px;
+}
 
+.float-button{
+    border-radius: 100px;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    padding: 0 !important;
+    bottom:1rem;
+    right: 2rem;
+    font-size: 35px;
+    background-color: #4c0070;
+    color: #ffffff;
+    border: 2px solid #4c0070;
+}
+
+.float-button:hover{
+    background-color: #ffffff;
+    border: 2px solid #4c79d3;
+    color:  #4c79d3 ;
+}
+
+/* hover - applies styles to an element when the cursor hovers over it */
 .button-login:hover, .button-default:hover{
     background: #4c79d3;
     color: #ffffff;
