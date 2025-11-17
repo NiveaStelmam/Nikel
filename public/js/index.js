@@ -1,4 +1,8 @@
 const myModal = new bootstrap.Modal("#register-modal");
+let logged = sessionStorage.getItem("logged");
+const session = localStorage.getItem("session");
+
+checkLogged();
 
 // Login to the system
 document.getElementById("login-form").addEventListener("submit", function (e) {
@@ -6,7 +10,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
 
     const email = document.getElementById("email-input").value;
     const password = document.getElementById("password-input").value;
-    const session = document.getElementById("session-check").checked;
+    const checkSession = document.getElementById("session-check").checked;
 
     const account = getAccount(email);
 
@@ -21,6 +25,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
             return;
         }
 
+        saveSession(email, checkSession);
         window.location.href = "home.html";
     }
 });
@@ -54,10 +59,31 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 
 });
 
+function checkLogged(){
+    if(session){
+       sessionStorage.getItem("logged", session)
+       logged = session;
+    }
+    if(logged){
+       saveSession(logged, session);
+
+       window.location.hreaf = "home.html";
+      }
+      
+}
+
 
 // localStorage - Allows you to save key-value pairs in the browser.
 function saveAccount(data){
     localStorage.setItem(data.login, JSON.stringify(data)); // converts a JavaScript object into a JSON string
+}
+
+function saveSession(data, saveSession){
+    if(saveSession){
+      localStorage.setItem("session", data);
+    }
+
+    sessionStorage.setItem("logged", data);
 }
 
 function getAccount(key){
