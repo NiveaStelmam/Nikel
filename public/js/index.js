@@ -61,17 +61,16 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 
 function checkLogged(){
     if(session){
-       sessionStorage.getItem("logged", session)
+       sessionStorage.getItem("logged", session);
        logged = session;
     }
     if(logged){
        saveSession(logged, session);
 
-       window.location.hreaf = "home.html";
+       window.location.href = "home.html";
       }
       
 }
-
 
 // localStorage - Allows you to save key-value pairs in the browser.
 function saveAccount(data){
